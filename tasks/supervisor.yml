@@ -5,7 +5,7 @@
   when: ansible_os_family == 'Debian'
 
 - name: Install supervisor
-  pip: name=supervisor version={{ supervisor_version }}
+  pip: name=supervisor version={{ supervisor_version }} executable=pip2
   notify:
     - supervisor restart
     
